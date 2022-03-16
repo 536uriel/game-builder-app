@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> game builder </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <h1 class="main-title">game builder</h1>
+
+    <canvas id="screen" width="600" height="600"></canvas>
+
+    <div class="edit-options">
+        <h1>אפשרויות עריכה</h1>
+
+        <div>
+            <button class="btn-drop-down btn" id="blocks">לבנים</button>
+            <button class="btn-drop-down btn" id="debug">מצב בדיקה</button>
+            <button class="btn-drop-down btn" id="character">דמות</button>
+            <button class="btn-drop-down btn" id="anim">אנימציה</button>
+            <button class="btn-drop-down btn" id="keyBoard">מקלדת</button>
+        </div>
+
+
+
+
+
+        <div class="e-option option" id="edit-blocks">
+            <h2>לבנים</h2>
+            rgb red 1 <h1 style="background-color: red;"> 1 צבע לבנה אדום</h1><input type="text" placeholder="0 - 1000"
+                id="rgb1" value="0">
+            rgb green 2 <h1 style="background-color: green;">2 צבע לבנה ירוק</h1><input type="text"
+                placeholder="0 - 1000" id="rgb2" value="0">
+            rgb blue 3 <h1 style="background-color: blue;">3 צבע לבנה כחול</h1><input type="text" placeholder="0 - 1000"
+                id="rgb3" value="0">
+            <input type="checkbox" value="ground" name="tileType">אדמה
+            <input type="checkbox" value="sky" name="tileType">שמיים
+        </div>
+
+        <div class="e-option option" id="debug-mode">
+            <h3>מצב בדיקה debug mode</h3>
+            <button class="btn-sccondary" id="btn-grid">מצב גריד</button>
+            <button class="btn-sccondary" id="btn-change-layers-order">שנה סדר ציור הדמות</button>
+            <h3>מרכוז הדמות</h3>
+            <input type="text" id="cameraCenter" value="120">
+        </div>
+
+
+        <div class="e-option option" id="edit-character">
+            <h2> דמות </h2>
+            <h3>תכונות</h3>
+            <input type="text" id="heightJumpInput" value="150"> הגובה קפיצה של הדמות
+            <input type="text" id="exelerationInput" value="300">המהירות של הדמות
+            <input type="text" id="timesJumpInput" value="1">כמות קפיצה של הדמות
+            <input type="text" id="gravityInput" value="17">כוח כבידה של הדמות
+
+            <div>
+                <h3>צור דמות חדשה</h3>
+                <button class="btn-sccondary" id="createCharacter">צור</button>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="e-option special-option" id="edit-anim">
+            <h3>אנימציה</h3>
+            <h5>בחר מצב</h5>
+            <div id="actionsImages">
+
+            </div>
+
+
+            <h5>בחר פעולה</h5>
+            <input type="checkbox" value="idle" name="createKeyMapInput"> עמידה
+            <input type="checkbox" value="jump" name="createKeyMapInput"> קפיצה
+            <input type="checkbox" value="run-1" name="createKeyMapInput"> ריצה-1
+            <input type="checkbox" value="run-2" name="createKeyMapInput"> ריצה-2
+            <input type="checkbox" value="run-3" name="createKeyMapInput"> ריצה-3
+            <button class="btn-sccondary" id="defineCharacter">הגדר</button>
+
+        </div>
+
+
+
+
+
+        <div class="e-option option" id="edit-keyBoard">
+            <h2>מקלדת</h2>
+            <h3> הגדר כפתור </h3>
+            <strong style="color: red;"> חייב אות גדולה באנגלית של המקלדת </strong>
+            <input type="text" id="keyInput">
+
+            <h3> מספר שחקן: </h3>
+            <input type="text" id="characterCurrentIndex" value="0">
+
+            <h3> הגדר התנהגות </h3>
+            <input type="checkbox" value="right" name="keyMapInput"> ימינה
+            <input type="checkbox" value="left" name="keyMapInput"> שמאלה
+            <input type="checkbox" value="run" name="keyMapInput"> ריצה
+            <input type="checkbox" value="jump" name="keyMapInput"> קפיצה
+            <button class="btn-sccondary" id="saveKeys">שמור מקלדת</button>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

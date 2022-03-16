@@ -1,0 +1,183 @@
+
+/*   color variables */
+/*   border radius */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+input[type="text"] {
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 30px;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+input:hover {
+  border-color: #adffff;
+}
+input:focus {
+  border-color: #18ffff;
+}
+ 
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* 
+1. When the input is in the focus state
+reduce the size of the label and move upwards 
+
+2. Keep label state when content is in input field 
+*/
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+
+
+
+
+:root {
+    --ff-primary: 'Lora', serif;
+
+    --fw-bold: 700;
+        
+    --clr-light: rgb(179, 184, 230);
+    --clr-dark: #303030;
+    --clr-accent: #339ff8;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+}
+
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.main-title {
+    font-size: 4rem;
+    text-align: center;
+    background:cornflowerblue;
+    color: cornsilk;
+    border: 1px solid black;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+#screen {
+    background-color: white;
+    display: inline-block;
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: 90vh;
+    text-align: center;
+    border: 2px solid #555;
+}
+
+.edit-options {
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 40vw;
+    height: 90vh;
+    text-align: center;
+
+}
+
+.option > input {
+    display: block;
+}
+
+.option > div {
+    display: block;
+}
+
+.option > button {
+    display: block;
+}
+
+.special-option > input {
+    display: inline-block;
+}
+
+.special-option > div {
+    display: inline-block;
+}
+
+.special-option > button {
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+
+}
+
+.btn-sccondary {
+    padding: .5em 2.5em;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+
+
+
+
+

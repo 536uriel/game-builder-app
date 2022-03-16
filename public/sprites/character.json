@@ -1,0 +1,24 @@
+{
+    "frames": [
+        {
+            "imageURL": "/img/idle.png",
+            "name": "idle"
+        },
+        {
+            "imageURL": "/img/run-1.png",
+            "name": "run-1"
+        },
+        {
+            "imageURL": "/img/run-2.png",
+            "name": "run-2"
+        },
+        {
+            "imageURL": "/img/run-3.png",
+            "name": "run-3"
+        },
+        {
+            "imageURL": "/img/jump.png",
+            "name": "jump"
+        }
+    ]
+}
