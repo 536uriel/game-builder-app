@@ -1,6 +1,6 @@
 import Entity from './Entity.js';
 import Go from './traits/Go.js';
-import Jump from './traits/jump.js';
+import Jump from './traits/Jump.js';
 import { loadSpriteSheetCharacters } from './loaders.js';
 import { createAnim } from './anim.js';
 import TileResolver from "./TileResolver.js";
